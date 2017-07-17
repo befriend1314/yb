@@ -924,6 +924,133 @@
 .businessinfo_box .data_list>li{ margin-bottom: 0; padding: 1rem 0;}
 /** 更新 END **/
 
+
+
+
+/** 提现页面 **/
+.withdrawcash_box{
+    margin-bottom: 1rem;
+    padding:1.25rem 1.25rem 3rem;
+    background: #fff;
+}
+.withdrawcash_box h2.title{
+    margin-top: 2rem;
+    font-size: 24px;
+    color: #333;
+    font-weight: normal;
+    text-align: center;
+}
+.withdrawcash_box .data_list{
+    margin: 1.5rem auto 0;
+    width: 440px;
+    padding-left: 0;
+}
+.withdrawcash_box .data_list li{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    padding: .8rem 0;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.withdrawcash_box .data_list .left_txt{
+    text-align: right;
+    width: 10rem;
+    font-size: .875rem;
+    color: #333;
+}
+.withdrawcash_box .data_list .right_txt {
+    position: relative;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    line-height: 2.5rem;
+}
+.withdrawcash_box .data_list .right_txt .tips{
+    margin-top: 5px;
+    margin-bottom: 0;
+    font-size: 14px;
+    color: #ff3d3d;
+    line-height: 1;
+}
+.withdrawcash_box .data_list input{
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0 .6rem;
+    height: 2.5rem;
+    outline: none;
+    z-index: 2;
+}
+.withdrawcash_box .btnbox{
+    margin: 1.5rem auto 0;
+    padding-left: 10rem;
+    width: 440px;
+    box-sizing: border-box;
+}
+.withdrawcash_box .btnbox a{
+    display: inline-block;
+    width: 7.375rem;
+    height: 2rem;
+    text-align: center;
+    line-height: 2rem;
+    border-radius: 2px;
+    font-size: .875rem;
+    border: 1px  solid transparent;
+}
+.withdrawcash_box .btnbox .comfir_btn{
+    margin-right: 2.5rem;
+    background: #0d7efb;
+    color: #fff;
+    border-color: #0d7efb;
+    text-decoration: none;
+}
+.withdrawcash_box .btnbox .comfir_btn:hover{
+    text-decoration: none;
+    opacity: .9;
+}
+.withdrawcash_box .btnbox .cancer_btn{
+    border-color: #b5b5b5;
+    background: #fff;
+    color: #333;
+}
+.withdrawcash_box .btnbox .cancer_btn:hover{
+    text-decoration: none;
+}
+.withdrawcash_box .remarks{
+    text-align: center;
+    font-size: .875rem;
+    color: #999;
+    margin-top: 2rem;
+}
+@media (max-width: 576px){
+    .withdrawcash_box .data_list{
+        width: inherit;
+        list-style: none;
+    }
+    .withdrawcash_box .data_list li{
+        display: inherit;
+        list-style: none;
+    }
+    .withdrawcash_box .data_list .left_txt{
+        text-align: left;
+    }
+    .withdrawcash_box .data_list .right_txt{
+        display: block;
+    }
+    .withdrawcash_box .btnbox{
+        width: inherit;
+        padding-left: 0;
+    }
+    .withdrawcash_box .btnbox a{
+        display: block;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}
+
+
 .talc{
     text-align: center;
 }
