@@ -1,0 +1,352 @@
+
+/** login **/
+.login_wrap{
+    position: relative;
+    min-width: 1000px;
+    height: 100vh;
+    min-height: 660px;
+    overflow-y: hidden;
+    background: url(../img/ibg.jpg) no-repeat center center;
+    background-size: cover;
+}
+.login_wrap .topbar{
+    height: 80px;
+    background: rgba(255, 255, 255, .6);
+}
+.page_width{
+    margin: 0 auto;
+    width: 1000px;
+}
+.ilogo{
+    float: left;
+    margin-left: 12px;
+    margin-top: 17px;
+}
+.ilogo img{
+    display: block;
+    width: 233px;
+}
+.left_txtbox{
+    float: left;
+    width: 525px;
+    margin-top: 125px;
+    margin-left: 30px;
+    color: #fff;
+}
+.left_txtbox h1.title{
+    font-size: 58px;
+    font-weight: normal;
+    color: #fff;
+    line-height: 1.2;
+}
+.left_txtbox h2.title{
+    margin-top: 15px;
+    font-size: 22px;
+    line-height: 1.75;
+    font-weight: normal;
+}
+.loginbox{
+    float: right;
+    box-sizing: border-box;
+    margin-top: 70px;
+    margin-right: 45px;
+    width: 350px;
+    padding: 25px 35px 35px;
+    background: rgba(0, 0, 0, .5);
+}
+.loginbox .title{
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+}
+.loginbox .eleFormbox{
+    position: relative;
+    height: 42px;
+    padding-left: 45px;
+    background: #fff;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+}
+.remember_box{
+    margin-top: 8px;
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+}
+.remember_box .remember_cont{
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    color: #fff;
+    font-size: 12px;
+}
+.remember_box .remember_cont input{
+    border-radius: 0;
+}
+.remember_box .remember_cont label{
+    margin-left: 3px;
+    margin-bottom: 0;
+}
+.remember_box .forgetpsw{
+    display: block;
+    font-size: 12px;
+    color: #fff;
+}
+.remember_box .forgetpsw:hover{
+    color: #0d7efb;
+    text-decoration: none;
+}
+.loginbox .submitbtn{
+    display: block;
+    margin-top: 15px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 3px;
+    color: #fff;
+    letter-spacing: 15px;
+    text-indent: 15px;
+    text-decoration: none;
+    background: #0d7efb;
+}
+.loginbox .submitbtn:hover{
+    opacity: .9;
+}
+.loginbox .eleFormbox input{
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 12px;
+}
+.loginbox .eleFormbox .yambox{
+    display: block;
+    margin-top: 12px;
+    margin-right: 16px;
+    width: 60px;
+    height: 20px;
+}
+.loginbox .eleFormbox .yambox img{
+    display: block;
+}
+
+.loginbox .eleFormbox + .eleFormbox{
+    margin-top: 18px;
+}
+.loginbox .eleFormbox::before{
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 22px;
+    height: 22px;
+    background: url(../img/ilogin_icon.png) no-repeat;
+}
+.loginbox .eleFormbox:nth-child(2)::before{
+    background-position: 0 -30px;
+}
+.loginbox .eleFormbox:nth-child(3)::before{
+    background-position: 0 -60px;
+}
+.footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+    font-size: 12px;
+    color: #fff;
+}
+
+
+/** 找回密码 1716 **/
+.login_wrap{
+    min-height: 760px;
+}
+.forgetpsw_box{
+    margin: 2.5rem auto 0;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    width: 750px;
+    background: #fff;
+    border-radius: 5px;
+}
+.forgetpsw_box .title{
+    font-size: 1.125rem;
+    color: #333;
+    text-align: center;
+}
+.forgetpsw_box .step_box{
+    margin: 2rem auto 0;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+    width: 65%;
+    overflow: hidden;
+}
+.forgetpsw_box .step_box .step1,
+.forgetpsw_box .step_box .step2,
+.forgetpsw_box .step_box .step3{
+    position: relative;
+    float: left;
+    padding-top: 1.5rem;
+    width: 33.333%;
+    text-align: center;
+    font-size: 0.75rem;
+    color: #999;
+    border-top: 2px solid #bbb;
+}
+.forgetpsw_box .step_box .numbox{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -.75rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 1.4;
+    color: #fff;
+    font-size: 1rem;
+    border: 1px solid #fff;
+    background: #bbb;
+    top: -.8rem;
+}
+.forgetpsw_box .step_box .step1.active,
+.forgetpsw_box .step_box .step2.active,
+.forgetpsw_box .step_box .step3.active{
+    color: #333;
+    border-color: #0d7efb;
+}
+.forgetpsw_box .step_box .active .numbox{
+    background: #0d7efb;
+}
+.forgetpsw_box .from_box{
+    margin: 0 auto;
+    padding-top: 1.5rem;
+    width: 400px;
+}
+.forgetpsw_box .from_box .txt1{
+    font-size: 0.875rem;
+    color: #666;
+}
+.forgetpsw_box .from_box .elebox{
+    margin-top: 1rem;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    height: 40px;
+    border: 1px solid #ddd;
+}
+.forgetpsw_box .from_box input{
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    font-size: 12px;
+    padding: 0 .6rem;
+    outline: none;
+    border: none;
+}
+.forgetpsw_box .from_box .yambox {
+    display: block;
+    margin-top: 9px;
+    margin-right: 10px;
+    width: 60px;
+    height: 20px;
+}
+.forgetpsw_box .from_box .yambox img{
+    display: block;
+}
+.forgetpsw_box .from_box .errtipsbox{
+    font-size: .875rem;
+    margin-top: .5rem;
+    padding-left: .4rem;
+    color: #ff3d3d;
+}
+.forgetpsw_box .from_box .nextbtnbox{
+    display: block;
+    margin-top: 1rem;
+    height: 2.5rem;
+    text-align: center;
+    line-height: 2.5rem;
+    background: #0d7efb;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 3px;
+}
+.forgetpsw_box .seccuess_box{
+    margin: 1rem auto 0;
+    width: 350px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+}
+.forgetpsw_box .seccuess_box .left_icon{
+    display: block;
+    width: 36px;
+    height: 36px;
+    background: url(../img/nav_ui.png) -49px -44px no-repeat;
+    background-size: 109px 106px;
+}
+.forgetpsw_box .seccuess_box .right_txt{
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    padding-left: 10px;
+}
+.forgetpsw_box .seccuess_box .right_txt .txt3{
+    margin-bottom: 5px;
+    font-size: 1rem;
+    color: #666;
+}
+.forgetpsw_box .seccuess_box .right_txt .txt4{
+    font-size: 0.875rem;
+    color: #999;
+}
+.forgetpsw_box .seccuess_box .right_txt .txt4 a{
+    color: #0d7efb;
+}
+
+@media (max-width: 800px) {
+    .login_wrap{
+        min-width: inherit;
+    }
+    .page_width{
+        width: inherit;
+    }
+    .forgetpsw_box{
+        margin-left: 2rem;
+        margin-right: 2rem;
+        width: inherit;
+    }
+    .forgetpsw_box .from_box{
+        margin-left: 2rem;
+        margin-right: 2rem;
+        width: inherit;
+    }
+    .forgetpsw_box .seccuess_box{
+        width: inherit;
+    }
+    .left_txtbox{
+        display: none;
+    }
+    .loginbox .eleFormbox .yambox{
+        position: absolute;
+        right: 5px;
+        top: 12px;
+        margin-top: 0;
+        margin-right: 0;
+    }
+    .loginbox{
+        float: none;
+        margin-right: inherit;
+        width: inherit;
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+}

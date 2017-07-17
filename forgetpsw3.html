@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="iloginpage">
+    <div class="login_wrap">
+        <div class="topbar">
+            <div class="page_width">
+                <a href="#" class="ilogo">
+                    <img src="img/ilogo.png" alt="logo">
+                </a>
+            </div>
+        </div>
+        <div class="icontentbox">
+            <div class="forgetpsw_box">
+                <p class="title">找回密码</p>
+                <div class="step_box">
+                    <div class="step1"><span class="numbox">1</span>填写账号</div>
+                    <div class="step2"><span class="numbox">2</span>邮箱验证</div>
+                    <div class="step3 active"><span class="numbox">3</span>完成</div>
+                </div>
+                <div class="from_box">
+                    <div class="seccuess_box">
+                        <div class="left_icon"></div>
+                        <div class="right_txt">
+                            <p class="txt3">新密码已发送您的注册邮箱，请查收！</p>
+                            <p class="txt4"><span id="js_timeout">4</span>秒后自动返回首页，<a href="#">立即跳转>></a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="page_width">Copyright © 2017 yunbaopay.All Right Reserved</div>
+        </div>
+    </div>
+    <script>
+        //显示倒数秒数
+        var t = 4;
+        var oTout = document.getElementById('js_timeout');
+        function showTime(){  
+            t -= 1;  
+            oTout.innerHTML = t;
+            if(t==0){  
+                console.log(1);  //这里跳转
+                return;
+            }  
+            //每秒执行一次,showTime()
+            setTimeout("showTime()",1000);  
+        }  
+        //执行showTime()
+        showTime();
+    </script>
+</body>
+</html>

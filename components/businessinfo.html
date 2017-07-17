@@ -1,0 +1,121 @@
+<div class="animated fadeIn">
+    <div class="businessinfo_box">
+        <h2 class="title">商户资料</h2>
+        <div class="from_box">
+            <div class="btnbox"><a href="javascript:;" class="btn revise" id="js_btn">修改</a></div>            
+            <ul class="data_list">
+                <li>
+                    <div class="left_txt">登录帐号</div>
+                    <div class="right_txt">测试test</div>
+                </li>
+                <li>
+                    <div class="left_txt">商户ID</div>
+                    <div class="right_txt">fe5f5b85-f5c7-4834-8fb6-2009dcf4d21a</div>
+                </li>
+                <li>
+                    <div class="left_txt">安全码(密钥)</div>
+                    <div class="right_txt">BZfB5Rmnsp835T2M</div>
+                </li>
+                <li>
+                    <div class="left_txt">真实姓名</div>
+                    <div class="right_txt">测试test</div>
+                </li>
+                <li>
+                    <div class="left_txt">身份证号</div>
+                    <div class="right_txt">4403198501012318</div>
+                </li>
+                <li>
+                    <div class="left_txt">电话号码</div>
+                    <div class="right_txt js_edit">15888888888</div>
+                </li>
+                <li>
+                    <div class="left_txt">网站名称</div>
+                    <div class="right_txt">测试test</div>
+                </li>
+                <li>
+                    <div class="left_txt">网站地址</div>
+                    <div class="right_txt">测试test</div>
+                </li>
+                <li>
+                    <div class="left_txt">同步回调地址</div>
+                    <div class="right_txt js_edit">http://119.139.199.87:8080/test.do</div>
+                </li>
+                <li>
+                    <div class="left_txt">异步回调地址</div>
+                    <div class="right_txt js_edit">http://119.139.199.87:8080/test.do</div>
+                </li>
+                <li>
+                    <div class="left_txt">QQ</div>
+                    <div class="right_txt">123456</div>
+                </li>
+                <li>
+                    <div class="left_txt">收款人</div>
+                    <div class="right_txt">测试test</div>
+                </li>
+                <li>
+                    <div class="left_txt">开户银行</div>
+                    <div class="right_txt">中信银行</div>
+                </li>
+                <li>
+                    <div class="left_txt">城市</div>
+                    <div class="right_txt">广东省深圳市</div>
+                </li>
+                <li>
+                    <div class="left_txt">开户支行</div>
+                    <div class="right_txt">科苑支行</div>
+                </li>
+                <li>
+                    <div class="left_txt">银行卡号</div>
+                    <div class="right_txt">6231382943233321</div>
+                </li>
+                <li>
+                    <div class="left_txt">通讯地址</div>
+                    <div class="right_txt">广东省深圳市</div>
+                </li>
+                <li>
+                    <div class="left_txt">余额结算比例</div>
+                    <div class="right_txt">100%</div>
+                </li>
+                <li>
+                    <div class="left_txt">保证金结算比例</div>
+                    <div class="right_txt">100%</div>
+                </li>
+                <li>
+                    <div class="left_txt">结算类型</div>
+                    <div class="right_txt">T+1(交易成功后第二天结算)</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    var oBtn = document.getElementById('js_btn');
+    var editlist = document.querySelectorAll('.js_edit');
+    oBtn.addEventListener('click', function () {
+        if(oBtn.classList.contains('revise')){
+            //修改
+            this.classList.remove('revise');
+            this.innerHTML = '保存';
+            editlist.forEach(function(e) {
+                var newEl =document.createElement('input');
+                newEl.value = e.innerHTML;
+                e.insertBefore(newEl, e.firstChild);
+                e.classList.add('editing');
+            }, this);
+        }else{
+            //保存
+            editlist.forEach(function(e) {
+                var el = e.getElementsByTagName('input')[0];
+                if(el){
+                    var evalue = el.value;
+                    e.removeChild(el);
+                    e.innerHTML = evalue;
+                }
+                
+            })
+            this.classList.add('revise');
+            this.innerHTML = '修改'
+        }
+    })
+</script>

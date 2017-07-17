@@ -1,0 +1,227 @@
+<div class="animated fadeIn">
+    <div class="incomebox">
+        <div class="order_search_box">
+            <div class="errtips_box js_errtips_box">没有找到记录，请调整搜索条件。</div>
+            <div class="search_form_box">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6 ui-flex">
+                        <label for="times1">日期:</label>
+                        <div class="inputbox datetime_box">
+                            <input type="text" id="times1" class="form_datetime">
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 ui-flex">
+                        <div class="btnbox">
+                            <a href="javascript:;" class="searchbtn js_searchbtn">查询</a>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="total_num_box">
+                            <div>总交易笔数：<span class="c999">0</span></div>
+                            <div>总分成金额：<span class="c999">0.00</span> 元</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="char_tablebox">
+            <canvas id="myChart1" width="400" height="200"></canvas>
+        </div>
+        <div class="char_tablebox" style="margin-top:2rem;">
+            <canvas id="myChart2" width="400" height="200"></canvas>
+        </div>
+        <div class="char_tablebox" style="margin-top:2rem;">
+            <canvas id="myChart3" width="400" height="200"></canvas>
+        </div>
+    </div>
+</div>
+
+<script src="js/bootstrap-datetimepicker.min.js"></script>
+<script src="js/Chart.min.js"></script>
+
+<script>
+
+;(function($){
+	$.fn.datetimepicker.dates['zh-CN'] = {
+			days: ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六", "星期日"],
+			daysShort: ["周日", "周一", "周二", "周三", "周四", "周五", "周六", "周日"],
+			daysMin:  ["日", "一", "二", "三", "四", "五", "六", "日"],
+			months: ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"],
+			monthsShort: ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"],
+			today: "今天",
+			suffix: [],
+			meridiem: ["上午", "下午"]
+	};
+}(jQuery));
+
+$(".form_datetime").datetimepicker({
+    format: 'yyyy-mm-dd',
+    minView:2,
+    language: 'zh-CN',
+    autoclose: 1
+});
+
+$('.searchbtn').bind('click', function () {
+    showErrorTips();
+})
+function showErrorTips() {
+    $('.errtips_box').fadeIn();
+    setTimeout(hideErrorTips,2000);  // 测试demo 用
+}
+
+function hideErrorTips() {
+    $('.errtips_box').fadeOut();
+}
+</script>
+
+
+<script>
+var ctx1 = document.getElementById('myChart1').getContext('2d');
+var ctx2 = document.getElementById('myChart2').getContext('2d');
+var ctx3 = document.getElementById('myChart3').getContext('2d');
+var chart = new Chart(ctx1, {
+    // The type of chart we want to create
+    type: 'line',
+
+    // The data for our dataset
+    data: {
+        labels: ["0时", "1时", "2时", "3时", "4时", "5时", "6时","7时", "8时", "9时", "10时", "11时", "12时", "13时","14时", "15时", "16时", "17时", "18时", "19时","20时", "21时", "22时", "23时"],
+        datasets: [{
+            label: "笔数",
+            backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: [29, 28, 27, 28, 32, 30, 31, 29, 29, 28, 27, 28, 32, 30, 31, 29, 29, 28, 27, 28, 32, 30, 31, 29],
+            fill: false,
+        }]
+    },
+
+    options: {
+        responsive: true,
+        title:{
+            display:true,
+            text:'单日收入分析'
+        },
+        tooltips: {
+            mode: 'index',
+            intersect: false,
+        },
+        hover: {
+            mode: 'nearest',
+            intersect: true
+        },
+        scales: {
+            xAxes: [{
+                display: true,
+                scaleLabel: {
+                    display: true,
+                    labelString: '时间'
+                }
+            }],
+            yAxes: [{
+                display: true,
+                scaleLabel: {
+                    display: true,
+                    labelString: '笔数'
+                }
+            }]
+        }
+    }
+});
+var chart = new Chart(ctx2, {
+    // The type of chart we want to create
+    type: 'line',
+
+    // The data for our dataset
+    data: {
+        labels: ["0时", "1时", "2时", "3时", "4时", "5时", "6时","7时", "8时", "9时", "10时", "11时", "12时", "13时","14时", "15时", "16时", "17时", "18时", "19时","20时", "21时", "22时", "23时"],
+        datasets: [{
+            label: "分成金额",
+            backgroundColor: 'rgb(75, 192, 192)',
+            borderColor: 'rgb(75, 192, 192)',
+            data: [290, 600, 631, 400, 300, 808, 500, 290, 600, 631, 400, 300, 808, 500, 290, 600, 631, 400, 300, 808, 500, 399, 391, 391],
+            fill: false,
+        }]
+    },
+
+    options: {
+        responsive: true,
+        title:{
+            display:true,
+            text:'单日收入分析'
+        },
+        tooltips: {
+            mode: 'index',
+            intersect: false,
+        },
+        hover: {
+            mode: 'nearest',
+            intersect: true
+        },
+        scales: {
+            xAxes: [{
+                display: true,
+                scaleLabel: {
+                    display: true,
+                    labelString: '时间'
+                }
+            }],
+            yAxes: [{
+                display: true,
+                scaleLabel: {
+                    display: true,
+                    labelString: '分成金额'
+                }
+            }]
+        }
+    }
+});
+var chart = new Chart(ctx3, {
+    // The type of chart we want to create
+    type: 'line',
+
+    // The data for our dataset
+    data: {
+        labels: ["0时", "1时", "2时", "3时", "4时", "5时", "6时","7时", "8时", "9时", "10时", "11时", "12时", "13时","14时", "15时", "16时", "17时", "18时", "19时","20时", "21时", "22时", "23时"],
+        datasets: [{
+            label: "比例(%)",
+            backgroundColor: 'rgb(54, 162, 235)',
+            borderColor: 'rgb(54, 162, 235)',
+            data: [ 2, 4, 5, 1, 8, 12, 13, 9, 6, 7,5, 2, 4, 5, 1, 8, 12, 13, 9, 6, 8, 12, 9,9],
+            fill: false,
+        }]
+    },
+
+    options: {
+        responsive: true,
+        title:{
+            display:true,
+            text:'单日收入分析'
+        },
+        tooltips: {
+            mode: 'index',
+            intersect: false,
+        },
+        hover: {
+            mode: 'nearest',
+            intersect: true
+        },
+        scales: {
+            xAxes: [{
+                display: true,
+                scaleLabel: {
+                    display: true,
+                    labelString: '时间'
+                }
+            }],
+            yAxes: [{
+                display: true,
+                scaleLabel: {
+                    display: true,
+                    labelString: '比例(%)'
+                },
+                formatter:'{value}%'
+            }]
+        }
+    }
+});
+</script>

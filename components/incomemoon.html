@@ -1,0 +1,103 @@
+<div class="animated fadeIn">
+    <div class="incomebox">
+        <div class="order_search_box">
+            <div class="errtips_box js_errtips_box">没有找到记录，请调整搜索条件。</div>
+            <div class="search_form_box">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6 ui-flex">
+                        <label for="times1">日期一:</label>
+                        <div class="inputbox datetime_box">
+                            <input type="text" id="times1" class="form_datetime">
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 ui-flex">
+                        <label for="times2">日期二:</label>
+                        <div class="inputbox datetime_box">
+                            <input type="text" id="times2" class="form_datetime">
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 ui-flex">
+                        <div class="btnbox">
+                            <a href="javascript:;" class="searchbtn js_searchbtn">查询</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th width="25%">支付通道</th>
+                        <th width="25%" class="talc">201706收入</th>
+                        <th width="25%" class="talc">201707收入</th>
+                        <th width="25%" class="talr">对比增长</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="c999">测试通道-aliqr</td>
+                        <td class="talc">1.2%</td>
+                        <td class="talc">1.2%</td>
+                        <td class="talr">0.00%</td>
+                    </tr>
+                    <tr>
+                        <td class="c999">测试通道-weixinqr</td>
+                        <td class="talc">1.6%</td>
+                        <td class="talc">1.6%</td>
+                        <td class="talr">0.00%</td>
+                    </tr>
+                    <tr>
+                        <td class="c999">测试通道-aliqr</td>
+                        <td class="talc">1.2%</td>
+                        <td class="talc">1.2%</td>
+                        <td class="talr">0.00%</td>
+                    </tr>
+                    <tr>
+                        <td class="c999">测试通道-weixinqr</td>
+                        <td class="talc">1.6%</td>
+                        <td class="talc">1.6%</td>
+                        <td class="talr c53a000">-0.99%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="js/bootstrap-datetimepicker.min.js"></script>
+
+<script>
+
+;(function($){
+	$.fn.datetimepicker.dates['zh-CN'] = {
+			days: ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六", "星期日"],
+			daysShort: ["周日", "周一", "周二", "周三", "周四", "周五", "周六", "周日"],
+			daysMin:  ["日", "一", "二", "三", "四", "五", "六", "日"],
+			months: ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"],
+			monthsShort: ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"],
+			today: "今天",
+			suffix: [],
+			meridiem: ["上午", "下午"]
+	};
+}(jQuery));
+
+$(".form_datetime").datetimepicker({
+    format: 'yyyy-mm',
+    minView:2,
+    language: 'zh-CN',
+    autoclose: 1
+});
+
+$('.searchbtn').bind('click', function () {
+    showErrorTips();
+})
+function showErrorTips() {
+    $('.errtips_box').fadeIn();
+    setTimeout(hideErrorTips,2000);  // 测试demo 用
+}
+
+function hideErrorTips() {
+    $('.errtips_box').fadeOut();
+}
+</script>
