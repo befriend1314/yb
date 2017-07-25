@@ -1050,6 +1050,205 @@
     }
 }
 
+/** 提现页面新 0725 **/
+
+
+.tixian_box{
+    margin-bottom: 1rem;
+    padding:1.25rem;
+    background: #fff;
+}
+.tixian_box .table th{
+    background: #f6f6f6;
+}
+.tixian_box .table tbody tr{
+    border-bottom: 1px solid #eee;
+}
+
+.tixian_box h2.title{
+    margin-bottom: 1.5rem;
+    text-align: left;
+    font-size: 24px;
+    color: #333;
+    font-weight: normal;
+}
+.tixian_box .tbelebox input{
+    display: block;
+    width: 100%;
+    height: 1.75rem;
+    padding: 0 8px;
+    border: 1px solid #ddd;
+    outline: none;
+    box-sizing: border-box;
+}
+.tixian_box .name_ip_box{
+    width: 5rem;
+}
+.tixian_box .card_num_box{
+    width: 11.25rem;
+}
+.tixian_box .card_band_box{
+    width: 7.5rem;
+}
+.tixian_box .hlh_num_box{
+    width: 8rem;
+}
+.tixian_box .money_num_box{
+    width: 8rem;
+}
+.tixian_box .add_card_btn_box{
+    padding-bottom: 6rem;
+    border-bottom: 1px solid #eee;
+}
+.tixian_box .add_card_btn{
+    display: inline-block;
+    padding: .3rem .875rem;
+    font-size: .875rem;
+    color: #333;
+    border: 1px  solid #b5b5b5;
+    border-radius: 2px;
+    text-decoration: none;
+}
+.tixian_box .add_card_btn:hover{
+    background: #0d7efb;
+    color: #fff;
+    border-color: #0d7efb;
+}
+.tixian_box .add_card_btn.disabled,
+.tixian_box .add_card_btn.disabled:hover{
+    background: #b5b5b5;
+    color: #fff;
+    border-color: #b5b5b5;
+    cursor: default;
+}
+.tixian_box .num_txt_box{
+    position: relative;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    overflow: hidden;
+    border-bottom: 1px solid #eee;
+}
+.tixian_box .e_right_box{
+    position: relative;
+    float: right;
+    width: 310px;
+}
+.tixian_box .e_right_box .a_list{
+    list-style: none;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+.tixian_box .e_right_box .a_list li{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    align-items:center;
+    height: 40px;
+}
+.tixian_box .e_right_box .a_list .left_txt{
+    display: inline-block;
+    width: 94px;
+    text-align: right;
+    font-size: .875rem;
+    color: #666;
+}
+.tixian_box .e_right_box .a_list .right_txt_box{
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    text-align: right;
+    font-size: .875rem;
+    color: #666;
+}
+.tixian_box .num_submit_box{
+    position: relative;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    overflow: hidden;
+}
+.tixian_box .e_right_box .a_list .input_box{
+    display: block;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    height: 2rem;
+    line-height: 2rem;
+    border: 1px solid #ddd;
+}
+.tixian_box .e_right_box .a_list .input_box input{
+    display: block;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    flex: 1;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    padding-left: 5px;
+}
+.tixian_box .e_right_box .a_list .input_box .code_input{
+    width: 120px;
+}
+.tixian_box .e_right_box .a_list .input_box .gcode_brn{
+    display: block;
+    margin-top: .3rem;
+    margin-bottom: .3rem;
+    margin-right: 5px;
+    font-size: 12px;
+    line-height: 1.4rem;
+    color: #666;
+    padding-left: 5px;
+    border-left: 1px solid #eee;
+    white-space: nowrap;
+}
+.tixian_box .e_right_box .a_list .input_box .gcode_brn:hover{
+    color: #0d7efb;
+    text-decoration: none;
+}
+.tixian_box .e_right_box .a_list .input_box .gcode_brn.disabled,
+.tixian_box .e_right_box .a_list .input_box .gcode_brn.disabled:hover{
+    cursor: default;
+    color: #999;
+    text-decoration: none;
+}
+.tixian_box .e_right_box .submit_btn_box{
+    padding-top: 1rem;
+    text-align: right;
+}
+.tixian_box .e_right_box .submit_btn{
+    display: inline-block;
+    border-radius: 2px;
+    padding: .3rem 1.8rem;
+    color: #fff;
+    background: #0d7efb;
+    font-size: 1.125rem;
+}
+.tixian_box .e_right_box .submit_btn:hover{
+    opacity: .9;
+    text-decoration: none;
+}
+.tixian_box .btm_txt{
+    margin-top: 5rem;
+    text-align: center;
+    font-size: .875rem;
+    color: #999;
+}
+
+@media (max-width: 400px){
+    .tixian_box .e_right_box{
+        float: none;
+        width: 100%;
+    }
+    .tixian_box .e_right_box .a_list .input_box .code_input{
+        width: 74px;
+    }
+}
+
+
+
+.c000{ color: #000;}
+
+
+/** 提现页面新 0725  END **/
 
 .talc{
     text-align: center;
